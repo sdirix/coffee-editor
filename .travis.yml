@@ -24,6 +24,7 @@ matrix:
           - NODE_OPTIONS="--max_old_space_size=4096"
       before_install:
         - dpkg --compare-versions `npm -v` ge 5.8 || npm i -g npm@^5.8
+        - npm install -g yarn
       script:
         - cd web/ && yarn --network-concurrency 1
     - language: java
